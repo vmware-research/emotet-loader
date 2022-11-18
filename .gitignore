@@ -1,4 +1,13 @@
 # Ignore everything in this directory
-*
+.user
+.obj
+.log
+.pdb
+.exe
+.idb
+.ilk
+.tlog
+.lastbuildstate
+.recipe
 # Except this file
 !.gitignore
