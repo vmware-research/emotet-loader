@@ -52,7 +52,7 @@ Let's perform a quick analysis of two Emotet modules:
 
 The Hybrid Analysis sandbox [shows](https://www.hybrid-analysis.com/sample/58d9d7c2d4a4140bbdc16c9b6ab1b56244ebc8b1c3eaa1fc63386bbce7acdb4c/63722b5c17290b68447e9951) that the Thunderbird account stealer tries to open the `%APPDATA%\THUNDERBIRD\PROFILES` folder, where Thunderbird saves personal information such as messages, passwords and user preferences. The sandbox detects this behavior as `Tries to steal browser sensitive information (file access)`.
 
-The Intezer sandbox [shows](https://analyze.intezer.com/analyses/d2aa6c12-c50d-4f2b-a7f2-b0a6803a97ba/behavior) that the Outlook account stealer reads `HKEY_LOCAL_MACHINE\SOFTWARE\Clients\Mail\Microsoft Outlook\DLLPathEx`, where the path to msmapi32.dll is stored. This library can be used to access the Outlook's sensitive information such as messages, passwords and user preferences.
+The Intezer sandbox [shows](https://analyze.intezer.com/analyses/d2aa6c12-c50d-4f2b-a7f2-b0a6803a97ba/behavior) that the Outlook account stealer reads `HKEY_LOCAL_MACHINE\SOFTWARE\Clients\Mail\Microsoft Outlook\DLLPathEx`, where the path to msmapi32.dll is stored. This library can be used to access the Outlook's sensitive information such as messages, passwords and user preferences. The VMRay sandbox is more precise with the detection, [showing](https://www.vmray.com/analyses/_vt/e81704d02356/report/overview.html) that the sample `Accesses Outlook profile data via MAPI`.
 
 ## Contributing
 
